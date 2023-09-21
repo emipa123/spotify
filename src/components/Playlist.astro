@@ -1,0 +1,19 @@
+---
+import PlayLinkButton from "./PlayLinkButton.astro";
+const{cardimg, header, text}=Astro.props;
+
+---
+
+<article>
+    <img src={cardimg} alt="playlistimg">
+    <h2> {header} </h2>
+    <p> {text} </p>
+<PlayLinkButton/>
+</article>
+
+<style>
+    article{
+        background-color: rgb(30, 30, 30);
+        padding: 30px;
+    }
+</style>
