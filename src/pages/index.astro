@@ -1,6 +1,7 @@
 ---
 import Nav from "../components/Nav.astro";
 import Playlist from "../components/Playlist.astro";
+import Footer from "../components/Footer.astro";
 import "../styles/global.css";
 
 ---
@@ -11,20 +12,32 @@ import "../styles/global.css";
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Home</title>
 </head>
 
 <body>
 
 <Nav/>
-<h1>Spotify-playlister</h1>
-<main class="playlistgrid">
+
+<main>
+    <h1>Spotify-playlister</h1>
+    <div class="playlistgrid">
   <Playlist cardimg="https://picsum.photos/id/65/150/150" text="her kommer tekst" header="Today's Top Hits" />
   <Playlist cardimg="https://picsum.photos/id/68/150/150" text="her kommer tekst" header="Rap Caviar"/>
   <Playlist cardimg="https://picsum.photos/id/76/150/150" text="her kommer tekst" header="All Out 2010s"/>
   <Playlist cardimg="https://picsum.photos/id/240/150/150" text="her kommer tekst" header="Rock Classics"/>
   <Playlist cardimg="https://picsum.photos/id/331/150/150" text="her kommer tekst" header="Chill Hits"/>
+</div>
+<div class="playlistgrid">
+    <Playlist cardimg="https://picsum.photos/id/65/150/150" text="her kommer tekst" header="Today's Top Hits" />
+    <Playlist cardimg="https://picsum.photos/id/68/150/150" text="her kommer tekst" header="Rap Caviar"/>
+    <Playlist cardimg="https://picsum.photos/id/76/150/150" text="her kommer tekst" header="All Out 2010s"/>
+    <Playlist cardimg="https://picsum.photos/id/240/150/150" text="her kommer tekst" header="Rock Classics"/>
+    <Playlist cardimg="https://picsum.photos/id/331/150/150" text="her kommer tekst" header="Chill Hits"/>
+  </div>
 </main>
+
+<Footer/>
 </body>
 
 </html>

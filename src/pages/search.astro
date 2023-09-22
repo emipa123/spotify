@@ -1,0 +1,84 @@
+---
+import Nav from "../components/Nav.astro";
+import Playlist from "../components/Playlist.astro";
+import "../styles/global.css";
+import TopBar from "../components/TopBar.astro";
+import Footer from "../components/Footer.astro";
+
+
+---
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Search</title>
+</head>
+
+<body>
+<Nav/>
+<TopBar />
+<main>
+    <div class="playlistgrid">
+        <Playlist cardimg="https://picsum.photos/id/65/150/150" text="her kommer tekst" header="Today's Top Hits" />
+        <Playlist cardimg="https://picsum.photos/id/68/150/150" text="her kommer tekst" header="Rap Caviar"/>
+        <Playlist cardimg="https://picsum.photos/id/76/150/150" text="her kommer tekst" header="All Out 2010s"/>
+        <Playlist cardimg="https://picsum.photos/id/240/150/150" text="her kommer tekst" header="Rock Classics"/>
+        <Playlist cardimg="https://picsum.photos/id/331/150/150" text="her kommer tekst" header="Chill Hits"/>
+      </div>
+      <div class="playlistgrid">
+          <Playlist cardimg="https://picsum.photos/id/65/150/150" text="her kommer tekst" header="Today's Top Hits" />
+          <Playlist cardimg="https://picsum.photos/id/68/150/150" text="her kommer tekst" header="Rap Caviar"/>
+          <Playlist cardimg="https://picsum.photos/id/76/150/150" text="her kommer tekst" header="All Out 2010s"/>
+          <Playlist cardimg="https://picsum.photos/id/240/150/150" text="her kommer tekst" header="Rock Classics"/>
+          <Playlist cardimg="https://picsum.photos/id/331/150/150" text="her kommer tekst" header="Chill Hits"/>
+        </div>
+</main>
+
+<Footer/>
+</body>
+
+</html>
+
+<style>
+     .playlistgrid{
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+        gap: 40px;
+    }
+ body {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    grid-template-rows: auto 1fr auto;
+    grid-template-areas:
+      "nav topbar"
+      "nav main"
+      "footer footer";
+    height: 100%;
+  }
+  :global(main) {
+    grid-area: main;
+  }
+  :global(nav) {
+    grid-area: nav;
+  }
+  :global(.topbar) {
+    grid-area: topbar;
+  }
+  :global(footer) {
+    grid-area: footer;
+  }
+  main {
+    display: grid;
+    grid-auto-rows: min-content;
+    gap: 2.5rem;
+
+    background: linear-gradient(#1f1f1f 0, #121212 100%) 0 0 /
+        100% 20rem no-repeat,
+        #121212;
+    overflow-y: auto;
+    padding:  1.5rem 1rem;
+  }
+</style>
