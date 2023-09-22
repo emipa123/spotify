@@ -1,26 +1,9 @@
 ---
-import Nav from "../components/Nav.astro";
 import Playlist from "../components/Playlist.astro";
-import Footer from "../components/Footer.astro";
 import "../styles/global.css";
-import TopBar from "../components/TopBar.astro";
-
+import MainLayout from "../layouts/MainLayout.astro";
 ---
-
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home</title>
-</head>
-
-<body>
-
-<Nav/>
-<TopBar />
-<main>
+<MainLayout>
     <h1>Spotify-playlister</h1>
     <div class="playlistgrid">
   <Playlist cardimg="https://picsum.photos/id/65/150/150" text="her kommer tekst" header="Today's Top Hits" />
@@ -36,12 +19,7 @@ import TopBar from "../components/TopBar.astro";
     <Playlist cardimg="https://picsum.photos/id/240/150/150" text="her kommer tekst" header="Rock Classics"/>
     <Playlist cardimg="https://picsum.photos/id/331/150/150" text="her kommer tekst" header="Chill Hits"/>
   </div>
-</main>
-
-<Footer/>
-</body>
-
-</html>
+  <MainLayout/>
 
 <style>
     .playlistgrid{

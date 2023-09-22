@@ -1,6 +1,6 @@
 ---
 import PlayLinkButton from "./PlayLinkButton.astro";
-const{cardimg, header, text}=Astro.props;
+const{cardimg, header, text, New}=Astro.props;
 
 ---
 
@@ -8,6 +8,7 @@ const{cardimg, header, text}=Astro.props;
     <img src={cardimg} alt="playlistimg">
     <h2> {header} </h2>
     <p> {text} </p>
+    {New &&<p class="new">NEW</p>}
 <PlayLinkButton/>
 </article>
 
@@ -15,5 +16,12 @@ const{cardimg, header, text}=Astro.props;
     article{
         background-color: rgb(30, 30, 30);
         padding: 30px;
+    }
+    .new{
+        border-radius: 200px;
+        background-color: blueviolet;
+        color: black;
+        padding: 20px;
+        text-align: center;
     }
 </style>

@@ -2,7 +2,7 @@
 
 import "../styles/global.css";
 import Searchbutton from "./Searchbutton.astro";
-
+const { hasSearch } = Astro.props;
 ---
 <header class="topbar">
     <menu>
@@ -24,7 +24,8 @@ import Searchbutton from "./Searchbutton.astro";
           >
         </button>
       </li>
-      <li><Searchbutton/></li>
+      <li><Searchbutton/> {hasSearch && <input type="text" />}</li>
+     
     </menu>
   
  
